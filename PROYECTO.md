@@ -42,15 +42,15 @@ Develop a professional and modern landing page that reflects the services and vi
 - Check that all links and CTAs are functional.
 
 
-## ActualizaciÛn - IntegraciÛn de InformaciÛn Detallada
-- **InvestigaciÛn**: Se intentÛ extraer texto adicional del PDF, pero gran parte del contenido textual parece estar codificado o en formato de imagen (OCR no disponible directamente).
-- **Estrategia**: Se utilizar·n los servicios y la estructura principal ya identificada, enriqueciendo las descripciones con lenguaje profesional acorde al sector de seguridad ejecutiva y blindaje.
-- **ImplementaciÛn**: Se actualizar· el HTML con secciones de MisiÛn, VisiÛn, Valores y una tabla de niveles de blindaje basada en est·ndares industriales (extraÌdos de la lÌnea gr·fica del PDF).
+## Actualizaci√≥n - Integraci√≥n de Informaci√≥n Detallada
+- **Investigaci√≥n**: Se intent√≥ extraer texto adicional del PDF, pero gran parte del contenido textual parece estar codificado o en formato de imagen (OCR no disponible directamente).
+- **Estrategia**: Se utilizar√°n los servicios y la estructura principal ya identificada, enriqueciendo las descripciones con lenguaje profesional acorde al sector de seguridad ejecutiva y blindaje.
+- **Implementaci√≥n**: Se actualizar√° el HTML con secciones de Misi√≥n, Visi√≥n, Valores y una tabla de niveles de blindaje basada en est√°ndares industriales (extra√≠dos de la l√≠nea gr√°fica del PDF).
 
 
 
-## ActualizaciÛn - Estructura Enriquecida
-- **Cambio**: Se aÒadieron secciones de MisiÛn, VisiÛn y Valores para fortalecer la identidad corporativa.
-- **Cambio**: Se integrÛ una tabla tÈcnica de niveles de blindaje (Nivel III a VI) basada en est·ndares internacionales (NIJ/CEN).
-- **DiseÒo**: Se mejorÛ el contraste visual en las nuevas secciones usando fondos zinc-950 y bordes dorados interactivos.
-- **DocumentaciÛn**: Este archivo .md se actualizar· con cada hito del proyecto.
+## Actualizaci√≥n - Estructura Enriquecida
+- **Cambio**: Se a√±adieron secciones de Misi√≥n, Visi√≥n y Valores para fortalecer la identidad corporativa.
+- **Cambio**: Se integr√≥ una tabla t√©cnica de niveles de blindaje (Nivel III a VI) basada en est√°ndares internacionales (NIJ/CEN).
+- **Dise√±o**: Se mejor√≥ el contraste visual en las nuevas secciones usando fondos zinc-950 y bordes dorados interactivos.
+- **Documentaci√≥n**: Este archivo .md se actualizar√° con cada hito del proyecto.
