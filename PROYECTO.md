@@ -11,7 +11,7 @@ Develop a professional and modern landing page that reflects the services and vi
     - Armored Vehicles (Vehículos Blindados).
     - Security Consulting and Advisory (Asesorías y Consultoría).
 - **Visual Identity**:
-    - **Colors**: Dominant professional colors (e.g., Black, Navy Blue, Silver/Gold accents). *Exact hex codes to be derived from PDF images.*
+    - **Colors**: Negro (#141414), Naranja (#E47A13), Blanco (#FFFFFF), Caqui (#BEA082), Gris (#929292).
     - **Typography**: Clean sans-serif (based on 'Aptos' font found in the document).
     - **Imagery**: Professional, high-quality images of security personnel, armored vehicles, and control centers.
 
@@ -49,8 +49,11 @@ Develop a professional and modern landing page that reflects the services and vi
 
 
 
-## Actualización - Estructura Enriquecida
-- **Cambio**: Se añadieron secciones de Misión, Visión y Valores para fortalecer la identidad corporativa.
-- **Cambio**: Se integró una tabla técnica de niveles de blindaje (Nivel III a VI) basada en estándares internacionales (NIJ/CEN).
-- **Diseño**: Se mejoró el contraste visual en las nuevas secciones usando fondos zinc-950 y bordes dorados interactivos.
-- **Documentación**: Este archivo .md se actualizará con cada hito del proyecto.
+## Actualización - Menú Sticky, Botón Volver Arriba y Menú Móvil
+
+- **Header**: Cambiado de `fixed` a `sticky top-0` — está en el flujo del documento (no monta sobre la portada) pero se mantiene visible al hacer scroll.
+- **Menú móvil**: Botón hamburguesa (☰) en mobile, despliega un panel con las opciones de navegación. Se cierra al seleccionar un enlace.
+- **Botón "Volver arriba"**: Botón naranja flotante en la esquina inferior derecha, aparece al bajar >400px, sube suavemente al inicio.
+- **Hero mobile**: Altura `h-auto min-h-[780px]` para que los botones no se desborden. En desktop mantiene `sm:h-[60vh] lg:h-[55vh]`.
+- **Video**: Hero usa `assets/hero_video.mp4` (copiado desde `Proyecto_Landing_Seguridad`).
+- **Escudo**: Copiado a `assets/escudo.png`, usado como favicon, logo en navbar, footer y hero. Responsive sizing via Tailwind.
