@@ -73,6 +73,14 @@
             background-color: #C76A10;
             transform: translateY(-2px);
         }
+        @keyframes slideLoop {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-slide {
+            animation: slideLoop 90s linear infinite;
+            width: fit-content;
+        }
     </style>
 </head>
 <body class="bg-negro text-white selection:bg-naranja selection:text-negro">
@@ -90,6 +98,8 @@
                 <a href="#inicio" class="hover:text-naranja transition">Inicio</a>
                 <a href="#servicios" class="hover:text-naranja transition">Servicios</a>
                 <a href="#nosotros" class="hover:text-naranja transition">Nosotros</a>
+                <a href="#blindaje" class="hover:text-naranja transition">Blindaje</a>
+                <a href="#blindados" class="hover:text-naranja transition">Blindados</a>
                 <a href="#contacto" class="hover:text-naranja transition">Contacto</a>
             </nav>
             <div class="flex items-center space-x-2">
@@ -104,6 +114,8 @@
             <a href="#inicio" class="block py-2 hover:text-naranja transition">Inicio</a>
             <a href="#servicios" class="block py-2 hover:text-naranja transition">Servicios</a>
             <a href="#nosotros" class="block py-2 hover:text-naranja transition">Nosotros</a>
+            <a href="#blindaje" class="block py-2 hover:text-naranja transition">Blindaje</a>
+            <a href="#blindados" class="block py-2 hover:text-naranja transition">Blindados</a>
             <a href="#contacto" class="block py-2 hover:text-naranja transition">Contacto</a>
             <a href="#contacto" class="block sm:hidden bg-naranja text-negro px-4 py-2 rounded font-bold text-xs uppercase hover:bg-naranja-dark transition text-center">Cotizar Ahora</a>
         </div>
@@ -138,6 +150,243 @@
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 items-start">
                     <a href="#servicios" class="hero-btn bg-naranja text-negro px-8 md:px-8 py-4 md:py-4 rounded font-bold text-lg md:text-lg uppercase hover:bg-naranja-dark transition text-center w-full sm:w-auto">Nuestros Servicios</a>
                     <a href="#contacto" class="hero-btn border-2 border-white px-8 md:px-8 py-4 md:py-4 rounded font-bold text-lg md:text-lg uppercase hover:bg-white hover:text-negro transition text-center w-full sm:w-auto">Saber Más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Characteristics Slider -->
+    <section class="py-3 md:py-4 bg-negro border-y border-gris/10 overflow-hidden">
+        <div class="relative w-full overflow-hidden">
+            <div class="flex animate-slide items-center gap-0">
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="heart" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>CONFIANZA QUE PROTEGE</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="cpu" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>TECNOLOGÍA QUE OPTIMIZA</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="star" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>PERSONAL QUE MARCA LA DIFERENCIA</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="trending-up" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>RESULTADOS QUE GENERAN VALOR</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="briefcase" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>PROFESIONALISMO en cada acción</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="book-open" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>CAPACITACIÓN continua</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="monitor" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>TECNOLOGÍA de vanguardia</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="refresh-cw" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>MEJORA continua</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="shield" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>SEGURIDAD confiable</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="handshake" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>SERVICIO confiable</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="lock" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>PROTECCIÓN CONFIABLE</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="user-check" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>PERSONAL CAPACITADO</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="eye" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>SUPERVISIÓN CONTINUA</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="layers" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>CAPACITACIÓN CONSTANTE</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="clipboard-list" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>PROCESOS ESTANDARIZADOS</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="users" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>RELACIONES DE CONFIANZA</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="award" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>SERIEDAD Y PROFESIONALISMO</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="message-circle" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>ATENCIÓN PERSONALIZADA</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="clock" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>DISPONIBILIDAD 24/7</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="map-pin" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>COBERTURA NACIONAL</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="zap" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>PROTECCIÓN DE ALTO NIVEL</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="shield-off" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>CONFIDENCIALIDAD GARANTIZADA</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="car" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>CONDUCTORES PROFESIONALES</span>
+                </div>
+                <!-- Duplicado para loop continuo -->
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="heart" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>CONFIANZA QUE PROTEGE</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="cpu" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>TECNOLOGÍA QUE OPTIMIZA</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="star" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>PERSONAL QUE MARCA LA DIFERENCIA</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="trending-up" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>RESULTADOS QUE GENERAN VALOR</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="briefcase" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>PROFESIONALISMO en cada acción</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="book-open" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>CAPACITACIÓN continua</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="monitor" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>TECNOLOGÍA de vanguardia</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="refresh-cw" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>MEJORA continua</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="shield" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>SEGURIDAD confiable</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="handshake" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>SERVICIO confiable</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="lock" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>PROTECCIÓN CONFIABLE</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="user-check" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>PERSONAL CAPACITADO</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="eye" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>SUPERVISIÓN CONTINUA</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="layers" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>CAPACITACIÓN CONSTANTE</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="clipboard-list" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>PROCESOS ESTANDARIZADOS</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="users" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>RELACIONES DE CONFIANZA</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="award" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>SERIEDAD Y PROFESIONALISMO</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="message-circle" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>ATENCIÓN PERSONALIZADA</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="clock" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>DISPONIBILIDAD 24/7</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="map-pin" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>COBERTURA NACIONAL</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="zap" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>PROTECCIÓN DE ALTO NIVEL</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="shield-off" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>CONFIDENCIALIDAD GARANTIZADA</span>
+                </div>
+                <span class="text-naranja text-lg font-thin select-none shrink-0 mx-3">|</span>
+                <div class="flex items-center justify-center shrink-0 gap-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wide text-white w-[130px] md:w-[160px]">
+                    <i data-lucide="car" class="text-naranja w-7 h-7 md:w-9 md:h-9 shrink-0"></i>
+                    <span>CONDUCTORES PROFESIONALES</span>
                 </div>
             </div>
         </div>
@@ -426,7 +675,7 @@
     </section>
 
     <!-- Armor Levels Table -->
-    <section class="py-16 md:py-24 bg-negro">
+    <section id="blindaje" class="py-16 md:py-24 bg-negro scroll-mt-20">
         <div class="container mx-auto px-4 md:px-6">
             <div class="text-center mb-12 md:mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold uppercase mb-4 italic">Estándares de <span class="text-naranja">Blindaje</span></h2>
@@ -459,6 +708,65 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Renta de Vehículos Blindados Section -->
+    <section id="blindados" class="py-12 md:py-16 bg-negro scroll-mt-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="relative rounded-lg overflow-hidden" style="-webkit-mask-image: linear-gradient(to right, transparent 0%, #000 3%, #000 85%, transparent 100%), linear-gradient(to bottom, transparent 0%, #000 4%, #000 96%, transparent 100%); -webkit-mask-composite: intersect; mask-image: linear-gradient(to right, transparent 0%, #000 3%, #000 85%, transparent 100%), linear-gradient(to bottom, transparent 0%, #000 4%, #000 96%, transparent 100%); mask-composite: intersect;">
+                <img src="assets/blindados.png" alt="Flota de Vehículos Blindados" class="absolute inset-0 w-full h-full object-cover">
+                <div class="relative">
+                    <div class="flex flex-col justify-center py-8 md:py-12 px-4 md:px-6 lg:px-10 max-w-lg">
+                        <h2 class="text-3xl md:text-4xl font-bold uppercase mb-4 italic">Renta de Vehículos <span class="text-naranja">Blindados</span></h2>
+                        <div class="w-24 h-1 bg-naranja mb-6"></div>
+                        <p class="text-sm md:text-base text-white/80 font-semibold uppercase tracking-wider leading-relaxed mb-8">
+                            PROTECCIÓN QUE TE ACOMPAÑA, SEGURIDAD QUE TE RESPALDA.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mb-8">
+                            <div class="p-3 md:p-4 bg-negro/70 backdrop-blur-sm border border-white/10 hover:border-naranja transition group rounded text-center">
+                                <i data-lucide="shield" class="text-naranja w-7 h-7 md:w-9 md:h-9 mx-auto mb-2"></i>
+                                <h3 class="text-[11px] md:text-sm font-bold uppercase leading-tight">Protección de Alto Nivel</h3>
+                            </div>
+                            <div class="p-3 md:p-4 bg-negro/70 backdrop-blur-sm border border-white/10 hover:border-naranja transition group rounded text-center">
+                                <i data-lucide="lock" class="text-naranja w-7 h-7 md:w-9 md:h-9 mx-auto mb-2"></i>
+                                <h3 class="text-[11px] md:text-sm font-bold uppercase leading-tight">Confidencialidad Garantizada</h3>
+                            </div>
+                            <div class="p-3 md:p-4 bg-negro/70 backdrop-blur-sm border border-white/10 hover:border-naranja transition group rounded text-center">
+                                <i data-lucide="clock" class="text-naranja w-7 h-7 md:w-9 md:h-9 mx-auto mb-2"></i>
+                                <h3 class="text-[11px] md:text-sm font-bold uppercase leading-tight">Disponibilidad 24/7</h3>
+                            </div>
+                            <div class="p-3 md:p-4 bg-negro/70 backdrop-blur-sm border border-white/10 hover:border-naranja transition group rounded text-center">
+                                <i data-lucide="user-check" class="text-naranja w-7 h-7 md:w-9 md:h-9 mx-auto mb-2"></i>
+                                <h3 class="text-[11px] md:text-sm font-bold uppercase leading-tight">Conductores Profesionales</h3>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mb-8">
+                            <div class="p-3 md:p-4 bg-negro/70 backdrop-blur-sm border border-white/10 rounded text-center flex flex-col items-center">
+                                <i data-lucide="car" class="text-naranja w-6 h-6 md:w-8 md:h-8 mb-2"></i>
+                                <h3 class="text-[11px] md:text-sm font-bold uppercase leading-tight">Vehículos Blindados <br>para Cada Necesidad</h3>
+                            </div>
+                            <div class="p-3 md:p-4 bg-negro/70 backdrop-blur-sm border border-white/10 rounded text-center flex flex-col items-center">
+                                <i data-lucide="star" class="text-naranja w-6 h-6 md:w-8 md:h-8 mb-2"></i>
+                                <h3 class="text-[11px] md:text-sm font-bold uppercase leading-tight">Seguridad Comodidad Confianza</h3>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex flex-col sm:flex-row items-start gap-3 mb-4">
+                                <a href="#contacto" class="bg-naranja hover:bg-naranja-dark text-negro font-bold uppercase px-6 py-2.5 md:px-8 md:py-3 rounded text-sm md:text-base transition whitespace-nowrap">Contáctanos</a>
+                                <a href="#contacto" class="border-2 border-naranja text-naranja hover:bg-naranja hover:text-negro font-bold uppercase px-6 py-2.5 md:px-8 md:py-3 rounded text-sm md:text-base transition whitespace-nowrap">Solicita tu Cotización</a>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-x-6 md:gap-x-8 gap-y-2 text-[11px] md:text-xs font-bold uppercase text-gris">
+                                <span class="flex items-center gap-1.5"><i data-lucide="calendar" class="text-naranja w-3.5 h-3.5 shrink-0"></i>Renta por Día, Semana o Mes</span>
+                                <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="text-naranja w-3.5 h-3.5 shrink-0"></i>Servicio Nacional</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -527,20 +835,57 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 md:py-12 border-t border-gris/20 bg-negro">
-        <div class="container mx-auto px-4 md:px-6 text-center">
-            <div class="flex justify-center items-center space-x-2 mb-6">
-                <div class="w-8 h-8 flex items-center justify-center">
-                    <img src="assets/escudo.png" alt="SB" class="h-full w-auto object-contain">
+    <footer class="py-12 md:py-16 border-t border-gris/20 bg-negro">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-10 md:mb-12">
+                <!-- Col 1: Logo + frase -->
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start space-x-2 mb-4">
+                        <div class="w-10 h-10 flex items-center justify-center">
+                            <img src="assets/escudo.png" alt="SB" class="h-full w-auto object-contain">
+                        </div>
+                        <span class="text-xl font-bold tracking-tighter uppercase italic">SB <span class="text-naranja">SEGURIDAD</span></span>
+                    </div>
+                    <p class="text-sm text-gris leading-relaxed">Seguridad privada con talento humano profesional, tecnología innovadora y procesos estandarizados para generar tranquilidad y confianza.</p>
                 </div>
-                <span class="text-lg font-bold tracking-tighter uppercase italic">SB <span class="text-naranja">SEGURIDAD</span></span>
+                <!-- Col 2: Links rápidos -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-sm font-bold uppercase tracking-wider mb-4 text-white">Enlaces</h4>
+                    <ul class="space-y-2 text-sm text-gris">
+                        <li><a href="#inicio" class="hover:text-naranja transition">Inicio</a></li>
+                        <li><a href="#servicios" class="hover:text-naranja transition">Servicios</a></li>
+                        <li><a href="#nosotros" class="hover:text-naranja transition">Nosotros</a></li>
+                        <li><a href="#contacto" class="hover:text-naranja transition">Contacto</a></li>
+                    </ul>
+                </div>
+                <!-- Col 3: Contacto -->
+                <div class="text-center md:text-left">
+                    <h4 class="text-sm font-bold uppercase tracking-wider mb-4 text-white">Contacto</h4>
+                    <ul class="space-y-3 text-sm text-gris">
+                        <li class="flex items-center justify-center md:justify-start space-x-2">
+                            <i data-lucide="map-pin" class="text-naranja w-4 h-4 flex-shrink-0"></i>
+                            <span>Tegucigalpa, Honduras — Cobertura nacional</span>
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start space-x-2">
+                            <i data-lucide="phone" class="text-naranja w-4 h-4 flex-shrink-0"></i>
+                            <span>+504 0000-0000</span>
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start space-x-2">
+                            <i data-lucide="mail" class="text-naranja w-4 h-4 flex-shrink-0"></i>
+                            <span>info@sb-seguridad.hn</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <p class="text-gris text-sm mb-6">&copy; 2026 <strong class="text-naranja">SB Seguridad Protección Blindados y Asesorías</strong>. Todos los derechos reservados.</p>
-            <div class="flex justify-center space-x-6 text-gris">
-                <a href="#" class="hover:text-naranja transition"><i data-lucide="facebook"></i></a>
-                <a href="#" class="hover:text-naranja transition"><i data-lucide="twitter"></i></a>
-                <a href="#" class="hover:text-naranja transition"><i data-lucide="linkedin"></i></a>
-                <a href="#" class="hover:text-naranja transition"><i data-lucide="instagram"></i></a>
+            <!-- Barra inferior: copyright + redes -->
+            <div class="flex flex-col md:flex-row items-center justify-between border-t border-gris/20 pt-6 md:pt-8">
+                <p class="text-xs text-gris mb-4 md:mb-0">&copy; 2026 <strong class="text-naranja">SB Seguridad Protección Blindados y Asesorías</strong>. Todos los derechos reservados.</p>
+                <div class="flex space-x-4 text-gris">
+                    <a href="#" class="hover:text-naranja transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-naranja transition"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-naranja transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-naranja transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                </div>
             </div>
         </div>
     </footer>
