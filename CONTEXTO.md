@@ -13,8 +13,7 @@ Sin framework, sin build step.
 |------|-------|
 | Ruta | `C:\Users\Carlos Matute\Documents\seguridadsb\` |
 | HTML | `index.html` |
-| Assets | `assets/hero_video.mp4`, `assets/escudo.png` |
-| Documentación | `PROYECTO.md`, `CONTEXTO.md` |
+| Assets | `assets/hero_video.mp4`, `assets/escudo.png`, `assets/blindados.png` |
 
 ---
 
@@ -25,7 +24,7 @@ Sin framework, sin build step.
 | `negro` | `#141414` | Fondo general |
 | `naranja` | `#E47A13` | Acentos, botones, badges |
 | `naranja-dark` | `#C76A10` | Hover de botones |
-| `caqui` | `#BEA082` | Secundario (poco usado) |
+| `caqui` | `#BEA082` | Separadores slider |
 | `gris` | `#929292` | Texto secundario, bordes |
 
 ---
@@ -33,14 +32,47 @@ Sin framework, sin build step.
 ## Estructura de Secciones (de arriba a abajo)
 
 1. **Header / Navbar** — sticky, fondo oscuro semi-transparente, logo + nombre, nav links, botón "Cotizar Ahora"
-2. **Hero Section** — video background, gradiente oscuro, badge, escudo + título apilado, línea animada, slogan, 2 botones CTA
-3. **Servicios** — grilla 4 tarjetas: Oficiales, Escoltas, Blindados, Tecnología
-4. **Sobre Nosotros** — imagen + texto con viñetas de diferenciadores
-5. **Misión / Visión / Valores** — 3 columnas
-6. **Estándares de Blindaje** — tabla Nivel III/III-A, IV, V/VI
-7. **Contacto** — info (ubicación, teléfono, email) + formulario
-8. **Footer** — logo, copyright, redes sociales
-9. **Back to Top** — botón flotante naranja (esquina inferior derecha)
+2. **Hero Section (`#inicio`)** — video background, gradiente oscuro, badge, escudo + título apilado, línea animada, slogan, 2 botones CTA
+3. **Characteristics Slider** — barra horizontal animada con iconos + texto, separadores naranja, loop infinito 90s
+4. **Servicios Especializados (`#servicios`)** — grilla 10 tarjetas: Confianza, Tecnología, Personal, Resultados, Profesionalismo, Capacitación, Tecnología, Mejora, Seguridad, Servicio
+5. **Servicios Adicionales** — grilla 9 tarjetas (Protección, Confidencialidad, Disponibilidad, Conductores, etc.)
+6. **Sobre Nosotros (`#nosotros`)** — imagen + texto con viñetas de diferenciadores
+7. **Misión / Visión / Valores** — 3 columnas
+8. **Valores Agregados** — grilla 2 columnas (Responsabilidad, Experiencia, Confidencialidad, etc.)
+9. **Estándares de Blindaje (`#blindaje`)** — tabla Nivel III/III-A, IV, V/VI
+10. **Renta de Vehículos Blindados (`#blindados`)** — imagen full-width con máscara, contenido superpuesto (cards 2×2, ventajas, CTAs)
+11. **Contacto (`#contacto`)** — info (ubicación, teléfono, email) + formulario
+12. **Footer** — logo, copyright, redes sociales
+13. **Back to Top** — botón flotante naranja (esquina inferior derecha)
+
+---
+
+## Navegación
+
+Orden del menú (desktop y mobile):
+
+**Inicio → Servicios → Nosotros → Blindaje → Blindados → Contacto**
+
+---
+
+## Characteristics Slider
+
+- Barra horizontal de loop infinito (duplicado para seamless scroll)
+- Cada item: icono + texto, centrado horizontalmente, `w-[130px] md:w-[160px]`
+- Separadores `|` en color naranja
+- Animación `slideLoop 90s linear infinite` con `translateX(-50%)`
+- Full-width, sin padding lateral
+
+---
+
+## Renta de Vehículos Blindados (`#blindados`)
+
+- Imagen de fondo `assets/blindados.png` (1505×1045)
+- Máscara CSS: degradado izquierdo/derecho y superior/inferior (transparente en bordes)
+- Altura determinada por contenido (sin fixed height, sin scroll)
+- Sin overlay oscuro — imagen a brillo completo
+- Cards con `bg-negro/70 backdrop-blur-sm`
+- CTAs: "Contáctanos" y "Solicita tu Cotización"
 
 ---
 
@@ -53,75 +85,19 @@ Sin framework, sin build step.
 - **Nosotros**: imagen arriba, texto abajo
 - **Misión/Visión/Valores**: 1 columna
 - **Contacto**: formulario debajo de info
-- **Botón "Cotizar Ahora"**: dentro del menú móvil (oculto en navbar)
 
 ### Tablet (≥ 768px)
-- Header: nav visible
 - Hero: `sm:h-[60vh]`, escudo + título lado a lado (`flex-row`)
 - Servicios: grid 2 columnas
 - Contacto: grid 2 columnas
 
 ### Desktop (≥ 1024px)
 - Hero: `lg:h-[55vh]`
-- Servicios: grid 4 columnas
+- Servicios: grid 5 columnas
 - Misión/Visión/Valores: 3 columnas
 
-### Landscape (teléfonos/tablets)
-- `@media (orientation: landscape) and (max-height: 600px)`:
-  - Hero: `100dvh`, contenido reducido (escudo 2rem, texto 0.875rem, gap 0.25rem)
-  - Sin margen superior
-- `@media (orientation: landscape) and (min-height: 601px) and (max-height: 768px)`:
-  - Escudo 3.5rem, título 1.25rem
-
----
-
-## Hero Section — Detalle
-
-```
-<section id="inicio" class="hero-section relative h-auto min-h-[780px] sm:min-h-0 sm:h-[60vh] lg:h-[55vh] flex flex-col items-start sm:items-center justify-start sm:justify-center overflow-hidden">
-```
-
-- **Background**: `<video autoplay muted loop playsinline>` con `object-cover`
-- **Gradiente**: `bg-gradient-to-r from-negro via-negro/70 via-30% to-transparent`
-- **Badge**: "TU SEGURIDAD, NUESTRA PRIORIDAD" (negro + white sobre naranja)
-- **Título**: 4 líneas "SEGURIDAD / PROTECCIÓN / BLINDADOS / Y ASESORÍAS", intercalando `text-gris` en líneas pares
-- **Escudo**: `assets/escudo.png`, responsive `h-28 sm:h-28 md:h-40 lg:h-64`
-- **Línea naranja**: `h-0.5 bg-naranja .line-draw` (animation drawLine: 0 → 33.3% width, 0.8s, delay 0.5s)
-- **Slogan**: "PROTEGEMOS LO QUE MÁS TE IMPORTA" con "MÁS TE IMPORTA" en naranja
-
----
-
-## Componentes Clave
-
-### Header (sticky)
-```html
-<header class="sticky top-0 z-50 w-full bg-negro/90 backdrop-blur-sm border-b border-gris/20">
-```
-- `sticky top-0`: en flujo normal, se pega arriba al hacer scroll
-- Mobile: hamburger toggle `#menuBtn` + panel `#mobileMenu` (clase `hidden` toggleada con JS)
-- Desktop: nav visible con links + botón "Cotizar Ahora"
-
-### Back to Top
-```css
-.back-to-top { position: fixed; bottom: 2rem; right: 2rem; opacity: 0; visibility: hidden; }
-.back-to-top.visible { opacity: 1; visibility: visible; }
-```
-- Aparece al scrollear > 400px
-- Chevron SVG hacia arriba
-
-### Smooth Scroll
-- `html { scroll-behavior: smooth; }`
-- `section[id] { scroll-margin-top: 5rem; }`
-- JS: intercepta clicks en `a[href^="#"]`, previene default, usa `scrollIntoView({ behavior: 'smooth' })`
-
----
-
-## Assets
-
-| Archivo | Origen | Uso |
-|---------|--------|-----|
-| `assets/hero_video.mp4` | Copiado de `Proyecto_Landing_Seguridad\video_202607091259.mp4` | Fondo del hero |
-| `assets/escudo.png` | Copiado de fuente del proyecto | Favicon, logo navbar, footer, hero |
+### Landscape
+- Hero se adapta con media queries para `max-height: 600px` y `601px-768px`
 
 ---
 
@@ -146,11 +122,10 @@ Sin framework, sin build step.
 
 ---
 
-## Historial de Cambios Recientes
+## Assets
 
-- Header cambiado de `fixed` a `sticky top-0` (no más superposición con hero)
-- Menú móvil con hamburguesa y panel toggle
-- Botón flotante "Volver arriba"
-- Hero en móvil: `h-auto min-h-[780px]` para que botones no se desborden
-- Hero en desktop: `sm:h-[60vh] lg:h-[55vh]`
-- Video y escudo copiados a `assets/`
+| Archivo | Origen | Uso |
+|---------|--------|-----|
+| `assets/hero_video.mp4` | `Proyecto_Landing_Seguridad\video_202607091259.mp4` | Fondo del hero |
+| `assets/escudo.png` | Fuente del proyecto | Favicon, logo navbar, footer, hero |
+| `assets/blindados.png` | `Proyecto_Landing_Seguridad\blindados.png` | Fondo sección Blindados |
