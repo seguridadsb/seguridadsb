@@ -57,3 +57,19 @@ Develop a professional and modern landing page that reflects the services and vi
 - **Hero mobile**: Altura `h-auto min-h-[780px]` para que los botones no se desborden. En desktop mantiene `sm:h-[60vh] lg:h-[55vh]`.
 - **Video**: Hero usa `assets/hero_video.mp4` (copiado desde `Proyecto_Landing_Seguridad`).
 - **Escudo**: Copiado a `assets/escudo.png`, usado como favicon, logo en navbar, footer y hero. Responsive sizing via Tailwind.
+
+## Actualización - Contenido Corporativo y Sección Valores Agregados
+
+- **Misión y Visión**: Textos actualizados con redacción completa del cliente.
+- **Sección Valores eliminada** (antes Misión/Visión/Valores → ahora solo Misión y Visión en 2 columnas).
+- **Servicios Especializados**: Cambiado de 4 cards a 10 cards en grid 5 columnas con iconos.
+- **Servicios Adicionales**: Nueva sección con 9 cards (Transporte Ejecutivo, Responsabilidad Social, Blindados, Radios, Supervisión Nocturna, Coordinación Autoridades, Auditorías, Reacción Nocturna, Monitoreo Remoto).
+- **Sobre Nosotros**: Texto renovado con 3 párrafos con iconos (sparkles, refresh-cw, handshake) + Propósito (target) y Compromiso (award). Imagen cambiada a `assets/sn.png`.
+- **Valores Agregados**: Nueva sección con 2 columnas:
+  - **Izquierda**: App Supervisión Tiempo Real (gps.png), Reportes Automáticos (2.png), Monitoreo 24/7 (3.png).
+  - **Derecha**: Capacitación Continua con sublista en 2 columnas (4.png), Poligrafías (5.png), Exámenes Toxicológicos (6.png).
+  - Cada item: icono circular naranja | texto | imagen cuadrada 80×64px con `object-cover`.
+- **Imágenes**: Copiadas de `Proyecto_Landing_Seguridad` a `assets/`: `sn.png`, `gps.png`, `2.png`, `3.png`, `4.png`, `5.png`, `6.png`.
+- **Nombre empresa resaltado**: Todas las ocurrencias de "Seguridad Protección Blindados y Asesorías" envueltas en `<strong class="text-naranja">`.
+- **Seguridad JS**: `lucide.createIcons()` envuelto en try-catch, null checks en DOM queries, script Lucide con `async`.
+- **Landscape**: Hero mantiene `100dvh` con contenido reducido.
