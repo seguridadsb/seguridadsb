@@ -48,30 +48,61 @@
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            width: 48px;
-            height: 48px;
+            width: 56px;
+            height: 56px;
             border-radius: 50%;
-            background-color: #E47A13;
-            color: #141414;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+            transition: opacity 0.3s, visibility 0.3s;
             z-index: 100;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            transform: translateY(10px);
         }
         .back-to-top.visible {
             opacity: 1;
             visibility: visible;
-            transform: translateY(0);
         }
-        .back-to-top:hover {
+        .back-to-top svg.arrow {
+            position: relative;
+            z-index: 2;
+            color: #141414;
+        }
+        .back-to-top .progress-ring {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+        .back-to-top .progress-ring .bg-circle {
+            fill: none;
+            stroke: rgba(255,255,255,0.15);
+            stroke-width: 3;
+        }
+        .back-to-top .progress-ring .fg-circle {
+            fill: none;
+            stroke: #ffffff;
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-dasharray: 150.8;
+            stroke-dashoffset: 150.8;
+            transition: stroke-dashoffset 0.1s ease;
+        }
+        .back-to-top .inner-btn {
+            position: absolute;
+            inset: 4px;
+            border-radius: 50%;
+            background-color: #E47A13;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            transition: background-color 0.3s;
+        }
+        .back-to-top:hover .inner-btn {
             background-color: #C76A10;
-            transform: translateY(-2px);
         }
         @keyframes slideLoop {
             0% { transform: translateX(0); }
@@ -95,12 +126,12 @@
                 <span class="text-base md:text-xl font-bold tracking-tighter uppercase italic">SB <span class="text-naranja">SEGURIDAD</span></span>
             </div>
             <nav class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide uppercase">
-                <a href="#inicio" class="hover:text-naranja transition">Inicio</a>
-                <a href="#servicios" class="hover:text-naranja transition">Servicios</a>
-                <a href="#nosotros" class="hover:text-naranja transition">Nosotros</a>
-                <a href="#blindaje" class="hover:text-naranja transition">Blindaje</a>
-                <a href="#blindados" class="hover:text-naranja transition">Blindados</a>
-                <a href="#contacto" class="hover:text-naranja transition">Contacto</a>
+                <a href="#inicio" class="hover:text-naranja transition" data-section="inicio">Inicio</a>
+                <a href="#servicios" class="hover:text-naranja transition" data-section="servicios">Servicios</a>
+                <a href="#nosotros" class="hover:text-naranja transition" data-section="nosotros">Nosotros</a>
+                <a href="#blindados" class="hover:text-naranja transition" data-section="blindados">Blindados</a>
+                <a href="#flota" class="hover:text-naranja transition" data-section="flota">Flota</a>
+                <a href="#contacto" class="hover:text-naranja transition" data-section="contacto">Contacto</a>
             </nav>
             <div class="flex items-center space-x-2">
                 <a href="#contacto" class="hidden sm:inline-block bg-naranja text-negro px-4 md:px-5 py-2 rounded font-bold text-xs md:text-sm uppercase hover:bg-naranja-dark transition whitespace-nowrap">Cotizar Ahora</a>
@@ -111,12 +142,12 @@
         </div>
         <!-- Mobile Menu -->
         <div id="mobileMenu" class="md:hidden hidden flex-col bg-negro/95 backdrop-blur-sm border-t border-gris/20 px-4 py-4 space-y-3 text-sm font-semibold tracking-wide uppercase">
-            <a href="#inicio" class="block py-2 hover:text-naranja transition">Inicio</a>
-            <a href="#servicios" class="block py-2 hover:text-naranja transition">Servicios</a>
-            <a href="#nosotros" class="block py-2 hover:text-naranja transition">Nosotros</a>
-            <a href="#blindaje" class="block py-2 hover:text-naranja transition">Blindaje</a>
-            <a href="#blindados" class="block py-2 hover:text-naranja transition">Blindados</a>
-            <a href="#contacto" class="block py-2 hover:text-naranja transition">Contacto</a>
+            <a href="#inicio" class="block py-2 hover:text-naranja transition" data-section="inicio">Inicio</a>
+            <a href="#servicios" class="block py-2 hover:text-naranja transition" data-section="servicios">Servicios</a>
+            <a href="#nosotros" class="block py-2 hover:text-naranja transition" data-section="nosotros">Nosotros</a>
+            <a href="#blindados" class="block py-2 hover:text-naranja transition" data-section="blindados">Blindados</a>
+            <a href="#flota" class="block py-2 hover:text-naranja transition" data-section="flota">Flota</a>
+            <a href="#contacto" class="block py-2 hover:text-naranja transition" data-section="contacto">Contacto</a>
             <a href="#contacto" class="block sm:hidden bg-naranja text-negro px-4 py-2 rounded font-bold text-xs uppercase hover:bg-naranja-dark transition text-center">Cotizar Ahora</a>
         </div>
     </header>
@@ -674,43 +705,6 @@
         </div>
     </section>
 
-    <!-- Armor Levels Table -->
-    <section id="blindaje" class="py-16 md:py-24 bg-negro scroll-mt-20">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold uppercase mb-4 italic">Estándares de <span class="text-naranja">Blindaje</span></h2>
-                <p class="text-sm md:text-base text-gris max-w-2xl mx-auto">Cumplimos con las normativas internacionales NIJ y CEN para garantizar la máxima protección en cada unidad.</p>
-            </div>
-            <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse border border-gris/20 rounded-lg overflow-hidden">
-                    <thead class="bg-gris/20">
-                        <tr>
-                            <th class="p-4 md:p-6 border border-gris/20 text-naranja uppercase text-xs md:text-sm tracking-widest font-bold">Nivel</th>
-                            <th class="p-4 md:p-6 border border-gris/20 text-naranja uppercase text-xs md:text-sm tracking-widest font-bold">Capacidad Balística</th>
-                            <th class="p-4 md:p-6 border border-gris/20 text-naranja uppercase text-xs md:text-sm tracking-widest font-bold">Amenazas Cubiertas</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-xs md:text-base text-gris">
-                        <tr class="hover:bg-gris/20 transition">
-                            <td class="p-4 md:p-6 border border-gris/20 font-bold text-white uppercase italic">Nivel III / III-A</td>
-                            <td class="p-4 md:p-6 border border-gris/20">Protección estándar urbana</td>
-                            <td class="p-4 md:p-6 border border-gris/20">Pistolas 9mm, .44 Magnum, .357 SIG y subfusiles.</td>
-                        </tr>
-                        <tr class="hover:bg-gris/20 transition">
-                            <td class="p-4 md:p-6 border border-gris/20 font-bold text-white uppercase italic">Nivel IV</td>
-                            <td class="p-4 md:p-6 border border-gris/20">Protección contra asalto</td>
-                            <td class="p-4 md:p-6 border border-gris/20">Rifles de alto poder calibre 7.62 (AK-47 / FAL) y 5.56 (M16).</td>
-                        </tr>
-                        <tr class="hover:bg-gris/20 transition">
-                            <td class="p-4 md:p-6 border border-gris/20 font-bold text-white uppercase italic">Nivel V / VI</td>
-                            <td class="p-4 md:p-6 border border-gris/20">Protección táctica crítica</td>
-                            <td class="p-4 md:p-6 border border-gris/20">Munición perforante, granadas de fragmentación y explosivos leves.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
 
     <!-- Renta de Vehículos Blindados Section -->
     <section id="blindados" class="py-12 md:py-16 bg-negro scroll-mt-20">
@@ -766,6 +760,35 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flota Section -->
+    <section id="flota" class="py-16 md:py-24 bg-negro scroll-mt-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold uppercase mb-4 italic">Nuestra <span class="text-naranja">Flota</span></h2>
+                <div class="w-24 h-1 bg-naranja mx-auto"></div>
+                <p class="text-sm md:text-base text-gris max-w-2xl mx-auto mt-6">Vehículos blindados y patrullas tácticas equipadas para brindar la máxima seguridad en cada operación.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+                <div class="relative group overflow-hidden rounded-lg aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/flota1.jpeg', 0)">
+                    <img src="assets/flota1.jpeg" alt="Patrulla SB" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-negro/0 group-hover:bg-negro/30 transition"></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/flota2.jpeg', 1)">
+                    <img src="assets/flota2.jpeg" alt="Patrulla SB" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-negro/0 group-hover:bg-negro/30 transition"></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/flota3.jpeg', 2)">
+                    <img src="assets/flota3.jpeg" alt="Patrulla SB" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-negro/0 group-hover:bg-negro/30 transition"></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg aspect-[4/3] cursor-pointer" onclick="openLightbox('assets/flota4.jpeg', 3)">
+                    <img src="assets/flota4.jpeg" alt="Patrulla SB" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-negro/0 group-hover:bg-negro/30 transition"></div>
                 </div>
             </div>
         </div>
@@ -855,6 +878,8 @@
                         <li><a href="#inicio" class="hover:text-naranja transition">Inicio</a></li>
                         <li><a href="#servicios" class="hover:text-naranja transition">Servicios</a></li>
                         <li><a href="#nosotros" class="hover:text-naranja transition">Nosotros</a></li>
+                        <li><a href="#blindados" class="hover:text-naranja transition">Blindados</a></li>
+                        <li><a href="#flota" class="hover:text-naranja transition">Flota</a></li>
                         <li><a href="#contacto" class="hover:text-naranja transition">Contacto</a></li>
                     </ul>
                 </div>
@@ -890,9 +915,29 @@
         </div>
     </footer>
 
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-negro/95 hidden items-center justify-center" onclick="closeLightbox(event)">
+        <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white hover:text-naranja transition z-10" aria-label="Cerrar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <button onclick="prevImage()" class="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-naranja transition z-10" aria-label="Anterior">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <img id="lightboxImg" src="" alt="" class="max-w-[90vw] max-h-[90vh] object-contain select-none">
+        <button onclick="nextImage()" class="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-naranja transition z-10" aria-label="Siguiente">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+    </div>
+
     <!-- Back to Top Button -->
     <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="back-to-top" id="backToTop" aria-label="Volver arriba">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        <svg class="progress-ring" viewBox="0 0 56 56">
+            <circle class="bg-circle" cx="28" cy="28" r="24"/>
+            <circle class="fg-circle" id="progressCircle" cx="28" cy="28" r="24"/>
+        </svg>
+        <span class="inner-btn">
+            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </span>
     </button>
 
     <script>
@@ -914,11 +959,18 @@
             });
         }
 
-        // Back to top button
+        // Back to top button + progress ring
         const backToTop = document.getElementById('backToTop');
-        if (backToTop) {
+        const progressCircle = document.getElementById('progressCircle');
+        const circumference = 150.8;
+        if (backToTop && progressCircle) {
+            progressCircle.style.strokeDashoffset = circumference;
             window.addEventListener('scroll', () => {
-                if (window.scrollY > 400) {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+                progressCircle.style.strokeDashoffset = circumference * (1 - progress);
+                if (scrollTop > 400) {
                     backToTop.classList.add('visible');
                 } else {
                     backToTop.classList.remove('visible');
@@ -938,6 +990,69 @@
                 }
             });
         });
+
+        // Lightbox
+        const flotaImages = ['assets/flota1.jpeg', 'assets/flota2.jpeg', 'assets/flota3.jpeg', 'assets/flota4.jpeg'];
+        let currentIndex = 0;
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+
+        function openLightbox(src, index) {
+            currentIndex = index;
+            lightboxImg.src = src;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(e) {
+            if (e && e.target !== e.currentTarget) return;
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + flotaImages.length) % flotaImages.length;
+            lightboxImg.src = flotaImages[currentIndex];
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % flotaImages.length;
+            lightboxImg.src = flotaImages[currentIndex];
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (!lightbox.classList.contains('hidden')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') prevImage();
+                if (e.key === 'ArrowRight') nextImage();
+            }
+        });
+
+        // Scroll spy - active nav link
+        const navLinks = document.querySelectorAll('[data-section]');
+        const sections = document.querySelectorAll('section[id]');
+        const sectionIds = ['inicio', 'servicios', 'nosotros', 'blindados', 'flota', 'contacto'];
+
+        const observer = new IntersectionObserver((entries) => {
+            let activeId = null;
+            entries.forEach(entry => {
+                if (entry.isIntersecting) activeId = entry.target.id;
+            });
+            if (activeId) {
+                navLinks.forEach(link => {
+                    link.classList.toggle('text-naranja', link.dataset.section === activeId);
+                });
+            }
+        }, { rootMargin: '-30% 0px -60% 0px' });
+
+        sections.forEach(s => observer.observe(s));
+
+        window.openLightbox = openLightbox;
+        window.closeLightbox = closeLightbox;
+        window.prevImage = prevImage;
+        window.nextImage = nextImage;
     </script>
 </body>
 </html>
